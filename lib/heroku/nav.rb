@@ -18,7 +18,7 @@ module Heroku
         begin
           @body.extend(Enumerable)
           @body = @body.to_a.join
-        rescue
+        rescue Exception => e
           p '~~~~~~~~~~~~~~~~ debugging request ~~~~~~~~~~~~~~~~~'
           p @status
           p @headers
