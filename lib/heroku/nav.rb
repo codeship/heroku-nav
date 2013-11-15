@@ -19,8 +19,10 @@ module Heroku
           @body.extend(Enumerable)
           @body = @body.to_a.join
           insert!
+          [@status, @headers, [@body]]
+        else
+          [@status, @headers, @body]
         end
-        [@status, @headers, [@body]]
       end
 
       def can_insert?(env)
