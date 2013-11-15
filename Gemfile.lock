@@ -1,10 +1,10 @@
 PATH
   remote: .
   specs:
-    heroku-nav (0.2.1)
+    heroku-nav (0.2.2)
 
 GEM
-  remote: http://rubygems.org/
+  remote: https://rubygems.org/
   specs:
     addressable (2.3.2)
     bacon (1.2.0)
