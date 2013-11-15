@@ -22,7 +22,7 @@ module Heroku
           p '~~~~~~~~~~~~~~~~ debugging request ~~~~~~~~~~~~~~~~~'
           p @status
           p @headers
-          p @respone
+          p @body
           raise e
         end
         insert! if can_insert?(env)
