@@ -15,14 +15,12 @@ module Heroku
 
       def call(env)
         @status, @headers, @body = @app.call(env)
-        if can_insert?(env)
-          @body.extend(Enumerable)
-          @body = @body.to_a.join
-          insert!
-          [@status, @headers, [@body]]
-        else
-          [@status, @headers, @body]
-        end
+        return [@status, @headers, @body] unless can_insert?(env)
+
+        @body.extend(Enumerable)
+        @body = @body.to_a.join
+        insert!
+        [@status, @headers, [@body]]
       end
 
       def can_insert?(env)
