@@ -1,7 +1,7 @@
 Heroku Nav
 ==========
 
-[![Build Status](https://travis-ci.org/heroku/heroku-nav.png?branch=master)](https://travis-ci.org/heroku/heroku-nav)
+![Codeship Status for codeship/heroku-nav](https://www.codeship.io/projects/59fa2430-3336-0131-a375-369e5a556cd3/status?branch=master)
 
 This is a Ruby gem providing a Rack middleware to help Heroku add-on providers
 displaying a customized header for users coming from a single sign-on session.
