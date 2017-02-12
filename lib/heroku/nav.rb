@@ -149,7 +149,7 @@ module Heroku
           match = @body.match(/(\<body[^\>]*\>)/i)
           if match && match.size > 0
             @body.insert(match.end(0), @nav)
-            @headers['Content-Length'] = Rack::Utils.bytesize(@body).to_s
+            @headers['Content-Length'] = @body.bytesize.to_s
           end
         end
       end
